@@ -3,16 +3,11 @@ project(iiwa_description)
 
 find_package(ament_cmake REQUIRED)
 
-install(DIRECTORY launch/
-  DESTINATION launch
-  PATTERN ".svn" EXCLUDE)
-
-install(DIRECTORY meshes/
-  DESTINATION meshes
-  PATTERN ".svn" EXCLUDE)
-
-install(DIRECTORY urdf/
-  DESTINATION urdf
-  PATTERN ".svn" EXCLUDE)
+install(DIRECTORY
+  launch
+  meshes
+  urdf
+  DESTINATION share/${PROJECT_NAME}/
+)
 
 ament_package()
